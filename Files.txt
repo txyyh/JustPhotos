@@ -1,0 +1,54 @@
+{
+  "bookSourceComment": "",
+  "bookSourceGroup": "轻小说",
+  "bookSourceName": "哔哩轻小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://w.linovelib.com",
+  "bookUrlPattern": ".+/novel/\\d+.html",
+  "customOrder": -134678,
+  "enabled": true,
+  "enabledExplore": true,
+  "exploreUrl": "　　　　　　　　　　　排🔱行　　　　　　　　　　　::\n 点击·总榜 ::/wenku/allvisit_0_0_0_0_0_0_0_{{page}}_0.html\n 点击·月榜 ::/wenku/monthvisit_0_0_0_0_0_0_0_{{page}}_0.html\n 点击·周榜 ::/wenku/weekvisit_0_0_0_0_0_0_0_{{page}}_0.html\n 推荐·总榜 ::/wenku/allvote_0_0_0_0_0_0_0_{{page}}_0.html\n 推荐·月榜 ::/wenku/monthvote_0_0_0_0_0_0_0_{{page}}_0.html\n 推荐·周榜 ::/wenku/weekvote_0_0_0_0_0_0_0_{{page}}_0.html\n 完结·总点 ::/wenku/allvisit_0_0_0_0_0_0_5_{{page}}_0.html\n 完结·月点 ::/wenku/monthvisit_0_0_0_0_0_0_5_{{page}}_0.html\n 完结·周点 ::/wenku/weekvisit_0_0_0_0_0_0_5_{{page}}_0.html\n 完结·总推 ::/wenku/allvote_0_0_0_0_0_0_5_{{page}}_0.html\n 完结·月推 ::/wenku/monthvote_0_0_0_0_0_0_5_{{page}}_0.html\n 完结·周推 ::/wenku/weekvote_0_0_0_0_0_0_5_{{page}}_0.html\n 收藏·榜单 ::/wenku/goodnum_0_0_0_0_0_0_0_{{page}}_0.html\n 字数·榜单 ::/wenku/words_0_0_0_0_0_0_0_{{page}}_0.html\n 新书·榜单 ::/top/newhot/{{page}}.html\n　　　　　　　　　　　文🌟库　　　　　　　　　　　::\n 电击·文库 ::/wenku/dengekibunko//{{page}}.html\n 角川·文库 ::/wenku/kadokawabunko/{{page}}.html\n 少女·文库 ::/wenku/teenagebunko/{{page}}.html\n  G A·文库  ::/wenku/gagraphicbunko/{{page}}.html\n  H J·文库  ::/wenku/hobbyjapanbunko/{{page}}.html\n MF·文库J ::/wenku/emuefubunkojei/{{page}}.html\n富士见·文库::/wenku//fujimibunko/{{page}}.html\nFami通·文库::/wenku/famitsubunko/{{page}}.html\n 小学馆 ::/wenku/shogakukan/{{page}}.html\n集英社::/wenku/shueisha/{{page}}.html\n讲谈社::/wenku/kodansha/{{page}}.html\n一迅社::/wenku/ichijinsha/{{page}}.html\n 其他 ::/wenku/other/{{page}}.html\n 轻改·漫画 ::/wenku/comic/{{page}}.html",
+  "header": "{\"User-Agent\": \"Mobile\"\n}",
+  "lastUpdateTime": 1623513831551,
+  "loginUrl": "https://w.linovelib.com/login.php",
+  "ruleBookInfo": {
+    "author": "[property=\"og:novel:author\"]@content",
+    "coverUrl": "[property=\"og:image\"]@content",
+    "init": "",
+    "intro": "[property=\"og:description\"]@content",
+    "kind": "class.book-cell@tag.p.1@ownText&&\nclass.tag-small red@text\n##.*万字|·.*",
+    "lastChapter": "class.gray ell@text",
+    "name": "[property=\"og:novel:book_name\"]@content",
+    "tocUrl": "class.btn-normal red@href",
+    "wordCount": "class.book-cell@tag.p.1@ownText##连载|完结"
+  },
+  "ruleContent": {
+    "content": "class.acontent@html",
+    "imageStyle": "full",
+    "nextContentUrl": "##url_next:'(/.+?_\\d+\\.html)##$1###",
+    "replaceRegex": "##[◇]|\\s*[（](本章未完|继续下一页)[）]\\s*|\\h(?:class|border)=\".+?\"|(?<=「)……(?=\\w)|^\\h+[\\u4e00-\\u9fa5]+版 转自 .+\\n(\\h+\\w+：.+\\n){0,5}\n##(文章内容为空)"
+  },
+  "ruleExplore": {
+    "bookList": "",
+    "kind": ""
+  },
+  "ruleSearch": {
+    "author": "class.book-author@textNodes",
+    "bookList": "ol@li||class.jsBooks@class.book-li",
+    "bookUrl": "tag.a.0@href",
+    "coverUrl": "tag.img@data-original",
+    "intro": "class.book-desc@text||class.book-intro@text",
+    "kind": "class.tag-small-group origin-right@tag.em.-1@text&&\nclass.tag-small-group origin-right@tag.em.-2@text&&\nclass.tag-small-group origin-right@tag.em.-3@text",
+    "name": "class.book-title@text",
+    "wordCount": ""
+  },
+  "ruleToc": {
+    "chapterList": "<js>result.replace(/(\\/novel\\/.+?)(\\.html\" class=.+?\\n.+? href=\")(javascript:cid\\(0\\))(?=\" class=)/g,\"$1$2$1♦️.html\").replace(/(javascript:cid\\(0\\))(\" class=.+?\\n.+? href=\")(\\/novel\\/.+?)(?=\\.html\" class=)/g,\"$3♦️♦️.html$2$3\")</js>\nclass.chapter-li-a",
+    "chapterName": "text",
+    "chapterUrl": "href\n<js>\nif(result.indexOf(\"♦️\")!=-1){cid=parseInt(result.match(/\\d+(?=♦️)/)[0]);\nnex=cid+1;pre=cid-1;\nresult=result.replace(/(\\d+)♦️♦️/,pre).replace(/(\\d+)♦️/,nex)}\nresult\n</js>",
+    "updateTime": "class.book-cell@tag.p.1@ownText##.*万字"
+  },
+  "searchUrl": "<js>\nif(page==1)\n{'/s/?searchkey={{key}}&searchtype=all'}\nelse\n{'/s/{{key}}/{{page}}.html'}\n</js>",
+  "weight": 0
+}
